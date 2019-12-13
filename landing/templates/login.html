@@ -1,0 +1,20 @@
+{% extends "home.html" %}
+{% load static %}
+{% block content %}
+
+<form action="/alunos/lista" method="POST">
+    {% csrf_token %}
+    <label for="email">Email: </label>
+    <input name="email" type="email" required>
+
+    <label for="senha">Senha: </label>
+    <input name="senha" type="password" required>
+
+    <label for="nome">Nome: </label>
+    <input name="nome" type="text" required>
+
+    <input type="submit" id="botao" value="Enviar">
+
+</form>
+
+{% endblock %}
